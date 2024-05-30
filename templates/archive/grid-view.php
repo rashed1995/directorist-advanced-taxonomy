@@ -9,9 +9,9 @@ if (!defined('ABSPATH')) exit;
 
 // Retrieve the display description settings
 $display_category_description = !empty( get_directorist_option('display_categories_description') ) ? true : false;
-// var_dump($display_category_description);
+var_dump($display_category_description);
 $display_location_description = !empty( get_directorist_option('display_locations_description') ) ? true : false;
-// var_dump($display_location_description);
+var_dump($display_location_description);
 
 // Initialize description variable
 $description = '';

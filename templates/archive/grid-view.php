@@ -9,9 +9,9 @@ if (!defined('ABSPATH')) exit;
 
 // Retrieve the display description settings
 $display_category_description = !empty( get_directorist_option('display_categories_description') ) ? true : false;
-var_dump($display_category_description);
+// var_dump($display_category_description);
 $display_location_description = !empty( get_directorist_option('display_locations_description') ) ? true : false;
-var_dump($display_location_description);
+// var_dump($display_location_description);
 
 // Initialize description variable
 $description = '';
@@ -61,36 +61,5 @@ if ($slug = get_query_var('atbdp_category')) {
     </div>
 </div>
 
-
-
-<?php
-
-/**
- * Add your custom php code here
- */
-
-
- add_filter('atbdp_listing_type_settings_field_list', function($fields) {
-    $new_fields = [
-        'display_categories_description' => [
-            'label' => __('Display Description', 'directorist'),
-            'type'  => 'toggle',
-            'value' => false,
-        ],
-        'display_locations_description' => [
-            'label' => __('Display Description', 'directorist'),
-            'type'  => 'toggle',
-            'value' => false,
-        ],
-    ];
-
-    return array_merge($fields, $new_fields);
-});
-
-add_filter('atbdp_categories_settings_sections', function($sections) {
-    $sections['categories_settings']['fields'][] = 'display_categories_description';
-    $sections['locations_settings']['fields'][] = 'display_locations_description';
-    return $sections;
-});
 
 

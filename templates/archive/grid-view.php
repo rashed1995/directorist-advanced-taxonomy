@@ -35,7 +35,7 @@ if ($slug = get_query_var('atbdp_category')) {
 
 <?php if ($display_description && !empty($description)): ?>
     <div class="description-container" style="background-color: #f2f2f2; padding: 20px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
-        <p class="tax-description" style="font-size: 16px; line-height: 1.6; color: #333;"><?php echo esc_html($description); ?></p>
+        <p class="tax-description" style="font-size: 16px; line-height: 1.6; color: #333;"><?php echo($description); ?></p>
     </div>
 <?php endif; ?>
 
